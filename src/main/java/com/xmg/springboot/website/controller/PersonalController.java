@@ -30,8 +30,9 @@ public class PersonalController {
 				accountServiceImpl.get(UserContext.getCurrent().getId()));
 		model.addAttribute("userinfo",
 				userinfoService.get(UserContext.getCurrent().getId()));
-		model.addAttribute("expAccount",
-				expAccountService.get(UserContext.getCurrent().getId()));
+		System.out.println("============================"+UserContext.getCurrent().toString());
+//		model.addAttribute("expAccount",
+//				expAccountService.get(UserContext.getCurrent().getId()));
 		return "personal";
 	}
 
